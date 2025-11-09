@@ -5,3 +5,5 @@ Copy results back (cudaMemcpy Device→Host)
 Free GPU memory (cudaFree)
 
 Rule: Always (destination, source, size, direction)
+
+Amdahl's law = 1 / fraction of sequential portion  + (fraction of parallelized portion/speed up)
