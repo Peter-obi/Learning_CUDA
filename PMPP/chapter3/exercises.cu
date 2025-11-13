@@ -53,3 +53,20 @@ void MatrixMul(float* M_h, float* N_h, float* P_h, int width){
     cudaFree(P_d);
 
 }
+
+//vector-matrix multiplication
+
+void vecMatrixMulKernel(float* A, float* B, float* C, int Width){
+    int row = blockIdx.x * blockDim.x + threadIdx.x;
+
+    if(row < Width){
+        float Avalue = 0;
+        for(int k = 0; k < Width; ++k){
+            Avalue += B[row*Width + k] * C[k];
+        }
+        A[row] = Avalue;
+    }
+}
+
+dim3 dimGrid (ceil(width/256), 1, 1);
+dim3 dimBlock (256, 1, 1);
