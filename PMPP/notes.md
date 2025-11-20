@@ -18,7 +18,7 @@ int linear_id =
 
 ---
 
-## 1. Row-major indexing (burn this in)
+## 1. Row-major indexing 
 
 For a matrix with shape **rows × cols**:
 
@@ -213,9 +213,3 @@ if intensity > machine_balance → compute-bound
   (Same Program, Multiple Data → your kernel is one program, run by many threads)
 
 ---
-
-If you want, tomorrow we can:
-
-* start from this cheat sheet,
-* you write the GEMM from scratch,
-* and I’ll only point out indexing/sync issues if they appear.
