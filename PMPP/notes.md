@@ -1,5 +1,3 @@
-Love this plan. Here’s a **compact cheat sheet** you can skim before rewriting the kernel.
-
 ---
 
 ## 0. Thread indexing / 3D blocks
